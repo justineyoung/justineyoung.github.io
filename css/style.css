@@ -1,0 +1,658 @@
+* {
+  box-sizing: border-box;
+}
+/*FONT information
+font-family: 'Sintony', sans-serif;
+font-family: 'Rufina', serif; */
+nav {
+  height: 60px;
+  background-color: #FBBF4A;
+  width: 100%;
+  padding: 0.5em 3em 0.5em 3em;
+  text-align: right;
+  /*elements w higher z will cause element to appear in front*/
+  position: fixed;
+}
+
+.vertical-center {
+  position:relative;
+  top: 40%;
+  padding-left: 4em;
+  /* -ms-transform: translateY(-50%); */
+  /* transform: translateY(-50%); */
+  /* vertical-align: middle; */
+}
+
+nav img {
+  float: left;
+  height: 100%;
+}
+
+html {
+  font-family: 'Sintony';
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* body {
+  font-size: 16px;
+  24px is 1.5em, 32px is 2em
+} */
+a {
+  color: inherit;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px; /*should be same as nav heights*/
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 60px; /*should be same as nav height*/
+  background: url(/images/white-marble.png) center / cover;
+  min-height: 100vh;
+}
+
+p {
+  line-height: normal;
+  font-family: 'Sintony';
+  font-size: 1.25em;
+  padding-bottom: 1em;
+}
+
+li {
+  line-height: normal;
+}
+
+.double-spaced {
+  line-height: 2em;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: bold;
+  font-family: 'Rufina', serif;
+  padding-bottom: 0.75em;
+}
+
+footer h1 {
+  padding-bottom: 0em;
+}
+
+.herotext {
+  font-size: 2rem;
+  font-family:'Sintony';
+  font-weight: normal;
+  line-height: normal;
+}
+
+br {
+  line-height: 6em;
+}
+
+h2 {
+  font-family: "Rufina";
+  line-height: normal;
+  font-size: 2em;
+  padding-bottom: 0.5em;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: 'Sintony';
+  line-height: normal;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+.home-tasks {
+  font-family:'Sintony';
+  line-height: normal;
+  text-transform: lowercase;
+  font-size: 1.2em;
+}
+
+h5 {
+  line-height: normal;
+}
+
+span {
+  font-weight: bold;
+}
+
+.yellowbox {
+  font-family: 'Rufina', serif;
+  display: inline-block;
+  background-color: #FBBF4A;
+}
+
+.container {
+  padding: 3em 3em 3em 3em;
+  /* top right bottom left */
+  /* border: 2px mediumaquamarine solid; */
+}
+
+.arrow {
+  display: flex;
+  align-self: flex-end;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+
+.work1 {
+  background: url(/images/black-bg.png) center / cover;
+  color: white;
+  padding-top: 90px;
+  display: block;
+}
+
+.fastfacts {
+  position: flex;
+  width: 50%;
+  float: left;
+  padding-right: 60px;
+}
+.description {
+  position: flex;
+  width: 50%;
+  float: right;
+  padding-left: 60px;
+  /* padding-top: 10%; */
+}
+
+.description .viewdetails {
+  background-color: #FBBF4A;
+}
+
+.description span {
+  color: black;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.work1 img {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+.hb:hover {
+  transition: 0.5s ease;
+  background-color: Grey;
+  opacity:0.5;
+}
+
+.work1 li {
+  padding-bottom: 1.5em;
+}
+
+.work1 h5 {
+  padding-top: 1em;
+}
+
+footer {
+  height: 140px;
+  width: 100%;
+  background-color: #FBBF4A;
+  padding: 10px;
+  text-align: left;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap-reverse;
+}
+
+footer .onethird {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 5px 0px 5px;
+  align-items: center;
+} 
+
+.fa {
+  padding: 0px 5px 0px 5px;
+}
+
+/* stuff for about page */
+.me {
+  width: 40%;
+  float: left;
+}
+
+.aboutme {
+  display: flex;
+  align-items: baseline;
+}
+
+.aboutme h1 {
+  padding-right: 0.25em;
+}
+
+.introduction {
+  display: flex;
+  flex-flow: nowrap;
+  flex-flow: column;
+  padding-left: 5em;
+}
+
+.introduction h2 {
+  background-color: #FBBF4A;
+  padding-bottom: 0;
+}
+/* stuff for case study: hoardboard */
+header {
+  padding-top: 60px;
+}
+
+.tasks{
+  font-family: Sintony;
+  color: #979797;
+  font-size: 18px;
+  padding-top: 1em;
+  /* font-weight: bold; */
+  text-transform: uppercase;
+}
+
+.title p {
+  font-size: 1em;
+}
+
+/* .intro h1 {
+  background-color: #FBBF4A;
+  display: block;
+} */
+
+.whole{
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+
+.half1 {
+  width: 45%;
+  /* padding-right: ; */
+  /* height: auto; */
+  /* border: 2px blue solid; */
+}
+
+.half2 {
+  width: 50%;
+  height: auto;
+  /* padding-left: 20px; */
+  border: purple 2px solid;
+}
+
+.onethird img {
+  width: 32%;
+  height: auto;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.headerdetails {
+  background-color: #3E3E3E;
+  color: white;
+  padding: 3em;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  /* border: 3px green solid; */
+}
+
+.headertext {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2em;
+  /* border: 5px red solid; */
+}
+
+.problem li {
+  padding-bottom: 2em;
+}
+
+.onefourth {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  /* border: 2px red solid; */
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  /* text-align: center; */
+  flex-direction: column;
+  align-content: center;
+  justify-self: center;
+  justify-items: center;
+  margin: 0 auto;
+  /* border: 2px sienna solid; */
+}
+
+.spanimage {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  background-color: #FBBF4A;
+  display: flex;
+  padding: 2em;
+  /* top right bottom left */
+  /* border: pink 2px solid; */
+  flex-direction: column;
+  font-size: 1.25em;
+}
+
+.caption {
+  font-size: 0.85em;
+  text-align: center;
+  padding: 0.5em;
+}
+
+.title h2 {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.title p {
+  width: 75%;
+  align-self: center;
+}
+
+h4 {
+  font-family: 'Rufina';
+  font-size: 1.25em;
+  padding-bottom: 1em;
+}
+
+.halfspace {
+  padding-bottom: 1em;
+}
+
+.space {
+  padding-bottom: 2em;
+}
+
+.viewdetails {
+  /* background-color: #FBBF4A; */
+  padding: 1.25em;
+  border-radius: 2em;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Rufina';
+  text-transform: uppercase;
+  font-size: 1em;
+  /* display: block; */
+  margin-top: 2em;
+  border: 2px solid #FBBF4A;
+}
+
+.callout {
+  background-color: #454545;
+  color: white;
+  padding: 2em;
+  font-size: 1.25rem;
+  margin-left: 3em;
+  margin-right: 3em;
+  margin-bottom: 3em;
+}
+
+.callouttitle {
+  font-weight: bold;
+  padding-bottom: 1em;
+}
+
+.wrapper {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.onethird {
+  width: 33%;
+  /* padding: 2em; */
+  height: auto;
+  border: 2px palevioletred solid;
+}
+
+.competitiveanalysis {
+  padding: 3em;
+  /* border: 2px salmon solid; */
+}
+
+ul.facts li {
+  padding-bottom: 1em;
+  padding-right: 3em;
+  /* border: 2px solid pink; */
+}
+
+.seventyfive {
+  width: 75%;
+  line-height: normal;
+  /* padding-bottom: 1em; */
+}
+
+.userpersonas {
+  padding-left: 6em;
+  padding-right: 6em;
+  /* border: 2px red solid; */
+}
+
+.persona {
+  padding: 2em;
+  /* border: 2px pink solid; */
+}
+
+h5 {
+  font-size: 1.5em;
+  color: #979797;
+  font-weight: bold;
+  padding-bottom: 0.75em;
+}
+
+th, td {
+  vertical-align: middle;
+  text-align: left;
+  padding: 1em;
+}
+
+th {
+  font-weight: bold;
+  font-size: 1.25em;
+  /* background-color: #FBBF4A; */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+table, th, td {
+  border-bottom: 1px lightgoldenrodyellow solid;
+  /* padding: 1em; */
+}
+
+table {
+  width:80%;
+  line-height: normal;
+  background-color: #FBBF4A;
+  /* background-color: #F3F3F3; */
+  border-radius: 10px;
+}
+
+/* tr:nth-child(even) {
+  background-color: #FFDB94;
+} */
+
+td:first-child {
+  padding-right: 5em;
+}
+
+.userflows {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.highlight {
+  /* background-color: #343333; */
+  background-color: #F3F3F3;
+  /* color: white; */
+  padding: 2em 4em 2em 4em;
+}
+
+.highlighttext {
+  font-size: 1.25em;
+  text-align: center;
+  font-weight: bold;
+}
+
+ol {
+  list-style-type: numeric;
+  list-style-position: inside;
+}
+
+.row {
+  border: 2px seagreen solid;
+  display: flex;
+  padding-top: 2em;
+}
+
+/* .column {
+  border: 2px orange dotted;
+} */
+
+.column img {
+  width: 100%;
+  display:flex;
+  /* justify-content: flex-end; */
+  /* align-items: baseline; */
+}
+
+.moodboard.column {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+.moodboard.column h4 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.brainstorm.column {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.brainstorm.row {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.refine {
+  background-color: #F3F3F3;
+}
+
+.half2.refine img {
+  padding-bottom: 2em;  
+}
+
+.preferencetests {
+  background-color: #444;
+  color: white;
+  padding: 5em;
+  /* border: 2px red solid; */
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+.finalmockups {
+  background: url(hoardboardimages/finalmockups-mobile.png) center / cover;
+}
+
+.conclusion {
+  background-color: black;
+  color: white;
+  padding: 8em 5em 8em 5em;
+}
+
+.twothirds {
+  width: 66%;
+  height: auto;
+  /* border: 2px solid slateblue; */
+}
+
+  /* for every h2 element in a div with 
+  row class in the conclusion class */
+.conclusion div.row h2 {
+  text-align: right;
+}
+
+.preferencetests h5 {
+  color: white;
+}
+
+.test, .challenge {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.test .whole {
+  /* border: 5px #FBBF4A solid; */
+  background-color: #5F5F5F;
+  padding: 3em;
+  border-radius: 10px;
+  margin-bottom: 2em;
+}
+
+.test1 .row:last-child, .test2 .row:last-child, .challenge .row {
+  padding-top: 0px;
+}
+
+.test .twothirds {
+  width: 60%;
+}
+
+hr {
+  background-color: #FBBF4A;
+  /* display: block; */
+  height: 1px;
+  border:0;
+  width: 50%;
+  border-color: #FBBF4A;
+  color: #FBBF4A;
+}
+
+.usabilitytests .column {
+  padding: 2em;
+}
+
+.usabilitytests h5 {
+  color: black;
+}
+
+.spacebefore {
+  padding-top: 5em;
+}
+
+.conclusion .onethird {
+  padding-right: 2em;
+}
+
+.underline {
+  border-bottom: 2px #FBBF4A solid;
+  display: inline-block;
+  line-height: 18px;
+  margin-bottom: 0.75em;
+}
+
+.underline-simple {
+  text-decoration: underline;
+  text-decoration-color: #FBBF4A;
+}
