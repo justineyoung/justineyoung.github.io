@@ -10,9 +10,12 @@ vertical horizontal*/
 nav {
   background-color: #FBBF4A;
   height: 60px;
+  letter-spacing: 1px;
   padding: 0.5em 3em 0.5em 3em;
   position: fixed;
   text-align: right;
+  text-transform: uppercase; 
+  z-index: 2;
   /*elements w higher z will cause element to appear in front*/
   width: 100%;
 }
@@ -35,7 +38,7 @@ html {
 }
 /* 24px is 1.5em, 32px is 2em*/
 a {
-  color: inherit;
+  color: black;
 }
 
 main {
@@ -75,6 +78,10 @@ h1 {
   padding-bottom: 0.75em;
 }
 
+.portfolio h1 {
+  color: #FBBF4A;
+}
+
 footer h1 {
   padding-bottom: 0em;
 }
@@ -109,7 +116,7 @@ h3 {
   font-family:'Sintony';
   line-height: normal;
   text-transform: lowercase;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 h5 {
@@ -129,7 +136,7 @@ span {
 .container {
   padding: 3em 3em 3em 3em;
   /* top right bottom left */
-  border: 2px mediumaquamarine solid;
+  /* border: 2px mediumaquamarine solid; */
 }
 
 .arrow {
@@ -144,52 +151,50 @@ span {
   background: url(/images/black-bg.png) center / cover;
   color: white;
   padding-top: 90px;
-  display: block;
+  display: flex;
+  flex-flow: column wrap;
 }
 
-.fastfacts {
-  position: flex;
-  width: 50%;
-  float: left;
-  padding-right: 60px;
-}
-.description {
-  position: flex;
-  width: 50%;
-  float: right;
-  padding-left: 60px;
-  /* padding-top: 10%; */
+.work1 .column:first-child {
+  padding-right: 3em;
 }
 
-.description .viewdetails {
-  background-color: #FBBF4A;
-}
-
-.description span {
-  color: black;
-  padding: 5px;
-  border-radius: 10px;
-}
+/* .work1 .column:last-child {
+  padding-left: 7em;
+} */
 
 .work1 img {
   width: 100%;
   border-radius: 15px;
   margin-top: 30px;
+  opacity: 1;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
 }
 
-.hb:hover {
+/* .middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  border: solid 5px pink;
+}
+
+.hb:hover{
   transition: 0.5s ease;
   background-color: Grey;
-  opacity:0.5;
+  opacity: 0.5;
+  z-index: 1;
 }
 
-.work1 li {
-  padding-bottom: 1.5em;
-}
-
-.work1 h5 {
-  padding-top: 1em;
-}
+.hb:hover .middle {
+  opacity: 1;
+  z-index: 1;
+} */
 
 footer {
   height: 140px;
@@ -214,32 +219,38 @@ footer .onethird {
   padding: 0px 5px 0px 5px;
 }
 
-/* stuff for about page */
+/* ~~~~~~~~~~~~stuff for about page~~~~~~~~~~~~ */
+.top {
+  display: flex;
+  align-items: baseline;
+  flex-flow: wrap;
+}
+
+.top h1 {
+  padding-right: 0.25em;
+  padding-top: 60px;
+}
+
 .me {
   width: 40%;
   float: left;
 }
 
-.aboutme {
-  display: flex;
-  align-items: baseline;
-}
-
-.aboutme h1 {
-  padding-right: 0.25em;
-}
-
 .introduction {
+  /* width: 50%; */
   display: flex;
   flex-flow: nowrap;
   flex-flow: column;
-  padding-left: 5em;
+  padding-left: 2em;
+  font-size: 16px;
 }
 
 .introduction h2 {
   background-color: #FBBF4A;
   padding-bottom: 0;
+  margin-bottom: 0.5em;
 }
+
 /* stuff for case study: hoardboard */
 header {
   padding-top: 60px;
@@ -273,14 +284,14 @@ header {
   width: 45%;
   /* padding-right: ; */
   /* height: auto; */
-  border: 2px blue solid;
+  /* border: 2px blue solid; */
 }
 
 .half2 {
   width: 50%;
   height: auto;
   /* padding-left: 20px; */
-  border: purple 2px solid;
+  /* border: purple 2px solid; */
 }
 
 .onethird img {
@@ -418,17 +429,20 @@ h4 {
   width: 33%;
   /* padding: 2em; */
   height: auto;
-  border: 2px palevioletred solid;
+  /* border: 2px palevioletred solid; */
 }
 
 .competitiveanalysis {
   padding: 3em;
+  text-align: center;
   /* border: 2px salmon solid; */
 }
 
-ul.facts li {
+.facts li {
   padding-bottom: 1em;
-  padding-right: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-align: left;
   /* border: 2px solid pink; */
 }
 
@@ -515,13 +529,9 @@ ol {
 }
 
 .row {
-  border: 2px seagreen solid;
+  /* border: 2px seagreen solid; */
   display: flex;
   padding-top: 2em;
-}
-
-.column {
-  border: 2px orange dotted;
 }
 
 .column img {
@@ -660,12 +670,16 @@ hr {
   text-decoration-color: #FBBF4A;
 }
 
-/* @media media-type and (media-feature) {
-  selector ( property: value; )
+/* .column {
+  border: 2px orange dotted;
 } */
 
 /* phones */
 @media screen and (max-width: 575px) {
+  .container {
+    padding: 1em;
+  }
+
   .row {
     flex-flow: wrap column;
   }
@@ -681,14 +695,99 @@ hr {
   .intro a {
     background: #FBBF4A;
   }
+
+  footer .onethird {
+    width: 100%;
+  }
+  
 }
 
 /* tablets */
 @media screen and (max-width: 991px) {
+  .container {
+    padding: 2em;
+  }
+  .me {    
+    padding: 200px;
+    background: url(/images/aboutme.jpg) center / cover;
+    margin-bottom: 2em;
+  }
+
+  .aboutme img {
+    display: none;
+  }
+
+  .introduction {
+    display: flex;
+    flex-flow: column nowrap;
+    padding-left: 0em;
+    }
+
+  .top h1{
+    padding-bottom: 0.2em;
+  }
+
+  .aboutme {
+    display: flex;
+    float: none;
+    flex-flow: column wrap;
+  }
+
+  .me {
+    width: 100%;
+    height: 30%;
+  }
+
+  .work1 h3, .work1 h1, .work1 .viewdetails {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
   .whole, .solution, .headertext {
     flex-flow: wrap column;
   }
 
+  .whole.competitiveanalysis {
+    flex-flow: wrap;
+  }
+
+  .work1 .half1, .work1 .half2,
+  .work1 .row, .work1 .column:first-child {
+    padding-top: 0.25em;
+    margin-top: 0;
+  }
+
+  .work1 .whole.half2 {
+    display: flex;
+    flex-flow: row;
+    padding-bottom: 1em;
+  }
+
+  .work1 .home-tasks.half1 {
+    width:  50%;
+  }
+
+  /* .work1 .half2.whole {
+    width: 75%;
+    align-self: center;
+  } */
+
+  /* .switch1 {
+    order: 1;
+    border: 2px red solid;
+  }
+
+  .switch2 {
+    order: 3;
+    border: 2px orange solid;
+  }
+
+  .switch3 {
+    order: 2;
+    border: 2px yellow solid; 
+  }*/
   .column {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -703,6 +802,7 @@ hr {
     display: flex;
     flex-flow: row wrap;
   }
+
   /* tasks */
   .intro .half1 .whole{
     display: flex;
@@ -747,9 +847,13 @@ hr {
   footer span {
     display: none;
   }
+
+  footer .onethird {
+    width: 50%;
+  }
 }
 
 /* laptops */
-@media screen and (max-width: 1199) {
-  
+@media screen and (max-width: 1199px) {
+ 
 }
