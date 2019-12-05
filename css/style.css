@@ -220,7 +220,7 @@ footer .onethird {
   justify-content: space-between;
   padding: 0px 5px 0px 5px;
   align-items: center;
-  border: 2px red solid;
+  /* border: 2px red solid; */
 } 
 
 footer a:hover {
