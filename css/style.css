@@ -41,6 +41,10 @@ a {
   color: black;
 }
 
+nav a:hover {
+  color: white;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -82,7 +86,7 @@ h1 {
   color: #FBBF4A;
 }
 
-footer h1 {
+footer h2 {
   padding-bottom: 0em;
 }
 
@@ -200,12 +204,15 @@ footer {
   height: 140px;
   width: 100%;
   background-color: #FBBF4A;
-  padding: 10px;
+  padding-top: 3em;
+  padding-bottom: 3em;
   text-align: center;
   bottom: 0;
   display: flex;
-  justify-content: space-between;
-  flex-flow: wrap-reverse;
+  /* justify-content: space-between; */
+  /* flex-flow: wrap-reverse; */
+  flex-flow: column;
+  align-items: center;
 }
 
 footer .onethird {
@@ -213,7 +220,12 @@ footer .onethird {
   justify-content: space-between;
   padding: 0px 5px 0px 5px;
   align-items: center;
+  border: 2px red solid;
 } 
+
+footer a:hover {
+  background: white;
+}
 
 .fa {
   /* padding: 0px 5px 0px 5px; */
@@ -290,7 +302,9 @@ header {
 
 .half2 {
   width: 50%;
-  height: auto;
+  /* height: auto; */
+  display: block;
+  /* height: 100%; */
   /* padding-left: 20px; */
   /* border: purple 2px solid; */
 }
@@ -298,6 +312,7 @@ header {
 .onethird img {
   width: 32%;
   height: auto;
+  /* border: seagreen 2px solid; */
 }
 
 .italic {
@@ -347,6 +362,7 @@ header {
 
 .spanimage {
   padding-top: 50px;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -411,8 +427,8 @@ h4 {
   color: white;
   padding: 2em;
   font-size: 1.25rem;
-  margin-left: 3em;
-  margin-right: 3em;
+  margin-left: 10em;
+  margin-right: 10em;
   margin-bottom: 3em;
 }
 
@@ -427,7 +443,7 @@ h4 {
 }
 
 .onethird {
-  width: 33%;
+  width: 32%;
   /* padding: 2em; */
   height: auto;
   /* border: 2px palevioletred solid; */
@@ -437,6 +453,11 @@ h4 {
   padding: 3em;
   text-align: center;
   /* border: 2px salmon solid; */
+}
+
+.shadow {
+  -webkit-box-shadow: 0 0 10px #C5c5c5;
+  box-shadow: 0 0 10px #C5c5c5;
 }
 
 .facts li {
@@ -571,8 +592,8 @@ ol {
 }
 
 .preferencetests {
-  background-color: #444;
-  color: white;
+  background-color: #F5F5F5;
+  color: black;
   padding: 5em;
   /* border: 2px red solid; */
   margin-left: 3em;
@@ -598,7 +619,7 @@ ol {
 }
 
 .preferencetests h5 {
-  color: white;
+  color: black;
 }
 
 .test, .challenge {
@@ -608,7 +629,7 @@ ol {
 
 .test .whole {
   /* border: 5px #FBBF4A solid; */
-  background-color: #5F5F5F;
+  background-color: #D3D3D3;
   padding: 3em;
   border-radius: 10px;
   margin-bottom: 2em;
@@ -642,6 +663,10 @@ hr {
 
 .spacebefore {
   padding-top: 5em;
+}
+
+.marginbefore {
+  margin-top: 5em;
 }
 
 .finalmockups .whole{
@@ -689,6 +714,7 @@ hr {
     width: 100%;
     margin-top: 1em;
   }
+
   .intro img {
     display: none;
   }
@@ -708,6 +734,7 @@ hr {
   .container {
     padding: 2em;
   }
+
   .me {    
     padding: 200px;
     background: url(/images/aboutme.jpg) center / cover;
@@ -800,8 +827,8 @@ hr {
   }
 
   .intro .half2 {
-    display: flex;
-    flex-flow: row wrap;
+    display: block;
+    /* flex-flow: row wrap; */
   }
 
   /* tasks */
@@ -845,9 +872,9 @@ hr {
     align-items: center;
   }
 
-  footer span {
+  /* footer span {
     display: none;
-  }
+  } */
 
   footer .onethird {
     width: 50%;
@@ -856,5 +883,10 @@ hr {
 
 /* laptops */
 @media screen and (max-width: 1199px) {
- 
+  /* .container {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 5em;
+    padding-right: 5em;
+  } */
 }
