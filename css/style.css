@@ -39,10 +39,12 @@ html {
 /* 24px is 1.5em, 32px is 2em*/
 a {
   color: black;
+  text-decoration: none;
 }
 
 nav a:hover {
   color: white;
+  -webkit-transition: 0.2s;
 }
 
 main {
@@ -88,6 +90,7 @@ h1 {
 
 footer h2 {
   padding-bottom: 0em;
+  /* border: pink 2px solid; */
 }
 
 .herotext {
@@ -209,19 +212,20 @@ footer {
   padding-bottom: 3em; */
   text-align: center;
   /* bottom: 0; */
+  display: flex;
+  /* align-content: center; */
+  align-self: center;
 }
 
 .box {
   display: flex;
   flex-flow: column;
-  /* align-content: center; */
   width: 50%;
-  /* align-self: center; */
   /* border: green 2px solid; */
 }
 
 footer .onethird {
-  width: 100%;
+  width: 50%;
   display: flex;
   justify-content: space-around;
   padding: 0px 5px 0px 5px;
@@ -236,7 +240,7 @@ footer a:hover {
 
 .fa {
   /* padding: 0px 5px 0px 5px; */
-  margin: 0px 5px 0px 5px;
+  margin: 0px 10px 0px 10px;
 }
 
 /* ~~~~~~~~~~~~stuff for about page~~~~~~~~~~~~ */
@@ -322,14 +326,20 @@ header {
   /* border: seagreen 2px solid; */
 }
 
-.italic {
-  font-style: italic;
+.emphasis {
+  display: inline-block;
+  background: #FBBF4A;
+  color: black;
+}
+
+.indentation {
+  margin-left: 1em;
 }
 
 .headerdetails {
   background-color: #3E3E3E;
   color: white;
-  padding: 3em;
+  padding: 5em;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -341,6 +351,21 @@ header {
   justify-content: space-between;
   padding-bottom: 2em;
   /* border: 5px red solid; */
+}
+
+.solution {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row;
+  /* width: 75%; */
+  /* font-size: 0.85em; */
+  /* border: 2px red solid; */
+}
+
+.solution .half2 {
+  display: flex;
+  flex-flow: column wrap;
+  /* border: 2px pink solid; */
 }
 
 .problem li {
@@ -429,13 +454,19 @@ h4 {
   border: 2px solid #FBBF4A;
 }
 
+.viewdetails:hover {
+  background-color: #FBBF4A;
+  -webkit-transition: 0.5s;
+}
+
 .callout {
   background-color: #454545;
   color: white;
   padding: 2em;
   font-size: 1.25rem;
-  margin-left: 10em;
-  margin-right: 10em;
+  width: 50%;
+  /* margin-left: 20em;
+  margin-right: 20em; */
   margin-bottom: 3em;
 }
 
@@ -443,6 +474,20 @@ h4 {
   font-weight: bold;
   padding-bottom: 1em;
 }
+
+.halftopmargin {
+  margin-top: 0.5em;
+}
+
+/* .callout ul{
+  list-style: none;
+}
+
+li::before {
+  content: "•";
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+} */
 
 .wrapper {
   padding-left: 1em;
@@ -685,6 +730,10 @@ hr {
 
 .finalmockups .viewdetails {
   background-color: #FBBF4A;
+}
+
+.finalmockups .viewdetails:hover {
+  background-color: white;
 }
 
 .conclusion .onethird {
