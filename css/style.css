@@ -81,7 +81,14 @@ h1 {
   font-size: 4em;
   font-weight: bold;
   font-family: 'Rufina', serif;
-  padding-bottom: 0.75em;
+  margin-bottom: 0.75em;
+  /* display: inline-block; */
+}
+
+.work1 a:hover {
+  text-decoration: underline;
+  text-decoration-color: #FBBF4A;
+  -webkit-transition: 0.5s;
 }
 
 .portfolio h1 {
@@ -236,6 +243,7 @@ footer .onethird {
 
 footer a:hover {
   background: white;
+  -webkit-transition: 0.2s;
 }
 
 .fa {
