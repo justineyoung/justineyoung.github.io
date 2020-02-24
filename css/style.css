@@ -101,11 +101,6 @@ h1 {
   color: #FBBF4A;
 }
 
-footer h2 {
-  padding-bottom: 0em;
-  /* border: pink 2px solid; */
-}
-
 .herotext {
   font-size: 2rem;
   font-family:'Sintony';
@@ -195,14 +190,6 @@ span {
   color: black;
 }
 
-.work1 .column:first-child {
-  padding-right: 3em;
-}
-
-/* .work1 .column:last-child {
-  padding-left: 7em;
-} */
-
 .work1 img {
   width: 100%;
   border-radius: 10px;
@@ -229,28 +216,29 @@ span {
   /* width: 50%; */
 }
 
+/* ~~~~~~~~~~footer information~~~~~~~~~~~~ */
+
 footer {
-  height: 140px;
-  width: 100%;
-  background-color: #FBBF4A;
-  text-align: center;
-  display: flex;
   align-self: center;
+  background-color: #FBBF4A;  
+  display: flex;
   flex-flow: column;
+  text-align: center;
   justify-content: center;
+  width: 100%;
 }
 
 .box {
-  width: 50%;
+  width: 60%;
   /* border: green 2px solid; */
+  display: flex;
+  align-items: center;
 }
 
 footer .onethird {
   width: 50%;
   display: flex;
   justify-content: space-around;
-  padding: 0px 5px 0px 5px;
-  align-items: center;
   align-self: center;
   /* border: 2px red solid; */
 } 
@@ -258,6 +246,11 @@ footer .onethird {
 footer a:hover {
   background: white;
   -webkit-transition: 0.2s;
+}
+
+footer h2 {
+  padding-bottom: 0em;
+  /* border: pink 2px solid; */
 }
 
 .fa {
@@ -822,14 +815,20 @@ hr {
   right: 0;
   justify-content: flex-end;
 }
-/* .column {
-  border: 2px orange dotted;
-} */
 
-/* .gif {
-  background: url(/portalimages/oldscroll-downsizedlarge.gif);
-  padding: 50px;
-} */
+/* super small phones */
+@media screen and (max-width: 376px) {
+  section.container {
+    padding: 1em;
+    /* border: 2px solid red; */
+  }
+
+  footer.container {
+    /* border: purple solid 2px; */
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
 
 /* phones */
 @media screen and (max-width: 575px) {
@@ -857,6 +856,11 @@ hr {
 
   footer .onethird {
     width: 100%;
+  }
+
+  .box {
+    width: 100%;
+    /* border: black 2px solid; */
   }
 
   .callout {
@@ -998,12 +1002,8 @@ hr {
     align-items: center;
   }
 
-  /* footer span {
-    display: none;
-  } */
-
   footer .onethird {
-    width: 50%;
+    width: 75%;
   }
 }
 
@@ -1022,4 +1022,8 @@ hr {
   .headerdetails {
     padding: 5em 20em;
   }
+
+  footer .onethird {
+    width: 50%;
+  } 
 }
